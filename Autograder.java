@@ -805,3 +805,8 @@ public class Autograder extends javax.swing.JFrame {
     private javax.swing.JLabel timeLabel;
     // End of variables declaration                   
 }
+
+/**
+ * javac Autograder.java
+ * java Autograder
+ */

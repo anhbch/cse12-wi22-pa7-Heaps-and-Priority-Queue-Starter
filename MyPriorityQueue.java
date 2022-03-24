@@ -1,24 +1,22 @@
 /**
- * TODO: Add your file header
- * Name:
- * ID:
- * Email:
- * Sources used: Put "None" if you did not have any external help
- * Some example of sources used would be Tutors, Zybooks, and Lecture Slides
- * 
- * 2-4 sentence file description here
+ * Name: Anh Bach
+ * ID: A17133630
+ * Email: tbach@ucsd.edu
+ * Sources used: Zybooks, Oracle, Slides
+ * This file contains MyPriorityQueue which
+ * extends Comparable and using MyMinHeap
  */
 
 import java.util.Collection;
 
 /**
- * TODO: Add Class Header
+ * This class extends Comparable and applying MyMinHeap 
+ * and its methods
  */
 public class MyPriorityQueue<E extends Comparable<E>>
 {
 
-    //TODO: Add a public instance variable called "heap"
-    //"heap" is of a generic MyMinHeap type
+    MyMinHeap<E> heap;
 
     
     /**

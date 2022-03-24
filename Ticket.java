@@ -1,12 +1,11 @@
 /**
- * TODO: Add your file header
- * Name:
- * ID:
- * Email:
- * Sources used: Put "None" if you did not have any external help
- * Some example of sources used would be Tutors, Zybooks, and Lecture Slides
+ * Name: Anh Bach
+ * ID: A17133630
+ * Email: tbach@ucsd.edu
+ * Sources used: Oracle
  * 
- * 2-4 sentence file description here
+ * This file contains Ticket class that implements 
+ * Comparable and uses priotity queue.
  */
 
 import java.util.HashMap;
@@ -163,11 +162,31 @@ public class Ticket implements Comparable<Ticket>{
     }
     
     /**
-     * TODO: Method Header
+     * The order of precedence is the order value of ticketType 
+     * (can be found from the orderMap) and then, createdAt
+     * @return -1,0,1 if current object numerically comes before,
+     * equal, or after other.
      */
     @Override
     public int compareTo(Ticket other){
-        //TODO: Your code
+        // Compare ticket type
+        if (this.orderMap.get(this.ticketType).compareTo
+            (other.orderMap.get(other.ticketType)) > 0) {
+            return 1;
+        }
+        if (this.orderMap.get(this.ticketType).compareTo
+            (other.orderMap.get(other.ticketType)) < 0) {
+            return -1;
+        }
+        // Compare create at
+        if (this.createdAt.compareTo(other.createdAt) > 0) {
+            return 1;
+        }
+        if (this.createdAt.compareTo(other.createdAt) < 0) {
+            return -1;
+        }
+        
+        // Returns 0 if all instance variables are equal
         return 0;
 
     }
